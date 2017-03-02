@@ -25,10 +25,10 @@ describe('Bubble Sort', function(){
         swap: swap
     };
 
-    // spyOn(obj, 'bubble').and.callThrough();
-    spyOn(obj, 'swap').and.callThrough();
-    obj.bubble([4,2,3,1]);
-    expect(obj.swap).toHaveBeenCalled();
+    spyOn(window, 'swap').and.callThrough();
+
+    bubbleSort([4,2,3,1]);
+    expect(swap).toHaveBeenCalledTimes(6);
 
 
   });
